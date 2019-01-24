@@ -1,0 +1,15 @@
+package com.springframework.didemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DiDemoApplication {
+
+	//are you here?
+	public static void main(String[] args) {
+		SpringApplication.run(DiDemoApplication.class, args);
+	}
+
+}
+
