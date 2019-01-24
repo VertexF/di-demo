@@ -2,13 +2,18 @@ package com.springframework.didemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.springframework.didemo.controllers.MyController;
 
 @SpringBootApplication
 public class DiDemoApplication {
 
-	//are you here?
 	public static void main(String[] args) {
-		SpringApplication.run(DiDemoApplication.class, args);
+		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
+		
+		MyController myController = (MyController) ctx.getBean("myController"); 
+		myController.hello();
 	}
 
 }
